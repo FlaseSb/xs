@@ -35,7 +35,6 @@ jobs:
 
     - name: cp static files to aliyun
       run: ossutil cp -r build/static/ oss://xstvlive/ --update
-      run: node scripts/upload-oss.js
 
       # - name: cp all files to aliyun
       #   run: ossutil cp -r build/ oss://shanyue-ncov/ --update --only-current-dir --exclude precache*
