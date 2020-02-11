@@ -28,7 +28,7 @@ jobs:
         npm run build
       env:
         CI: true
-    # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
+    # 设置阿里云OSS的 id/secret，存储到 github 的 secr ets 中
     - name: setup aliyun oss
       uses: manyuanrong/setup-ossutil@master
       with:
