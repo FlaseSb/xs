@@ -32,4 +32,4 @@ jobs:
     - name: npm run build
       run: npm run build
     - name: cp all files to aliyun
-       run: ossutil cp -r build/ oss://xstvlive/ --update --only-current-dir --exclude precache*
+      run: ossutil cp -rf build/ oss://xstvlive/
