@@ -31,19 +31,11 @@ jobs:
       run: node scripts/build-origin.js
     - name: npm run build
       run: npm run build
-    - name: cp static files to aliyun
-      run: node scripts/upload-oss.js
-
     - name: setup aliyun oss
-       uses: manyuanrong/setup-ossutil@v1.0
-       with:
-         endpoint: oss-cn-hangzhou.aliyuncs.com
-         access-key-id: ${{ secrets.OSS_KEY_ID }}
-         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-     - name: 删除冗余文件
-       run: ossutil rm oss://xstvlive/static -rf
-       if: github.event_name == 'schedule'
-     - name: update ossutil
-       run: ossutil update -f
-     - name: cp static files to aliyun
-       run: ossutil cp -r build/static/ oss://xstvlive/static/ --update
+      uses: manyuanrong/setup-ossutil@master
+      with:
+        endpoint: oss-cn-beijing.aliyuncs.com
+        access-key-id: ${{ secrets.OSS_KEY_ID }}
+        access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+    - name: cp files to aliyun
+      run: ossutil cp -r build/static/ oss://xstvlive/static/ --update
