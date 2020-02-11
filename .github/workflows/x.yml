@@ -39,3 +39,5 @@ jobs:
         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
     - name: cp files to aliyun
       run: ossutil cp -r build/static/ oss://xstvlive/static/ --update
+    - name: cp all files to aliyun
+      run: ossutil cp -r build/ oss://xstvlive/ --update --only-current-dir --exclude precache*
