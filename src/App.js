@@ -109,7 +109,6 @@ function Fallback () {
   return (
     <div className="fallback">
       <div>
-        /*代码仓库: <a href="https://github.com/shfshanyue/2019-ncov">shfshanyue/2019-ncov</a>*/
       </div>
     </div>
   )
