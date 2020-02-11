@@ -31,10 +31,5 @@ jobs:
       run: node scripts/build-origin.js
     - name: npm run build
       run: npm run build
-    #- name: cp static files to aliyun
-
-    - name: cp static files to aliyun
-      run: ossutil cp -r build/static/ oss://xstvlive/ --update
-
-      # - name: cp all files to aliyun
-      #   run: ossutil cp -r build/ oss://shanyue-ncov/ --update --only-current-dir --exclude precache*
+    - name: cp all files to aliyun
+       run: ossutil cp -r build/ oss://xstvlive/ --update --only-current-dir --exclude precache*
