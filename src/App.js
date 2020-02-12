@@ -23,7 +23,7 @@ const fetcher = (url) => axios(url).then(data => {
   return data.data.data
 })
 
-function New ({ title, summary, sourceUrl, pubDate, pubDateStr }) {
+function New ({ title, summary, sourceUrl, pubDate, pubDateStr,infoSource }) {
   return (
     <div className="new">
       <div className="new-date">
@@ -34,6 +34,7 @@ function New ({ title, summary, sourceUrl, pubDate, pubDateStr }) {
       </div>
       <a className="title" href={sourceUrl}>{ title }</a>
       <div className="summary">{ summary.slice(0, 100) }...</div>
+      <div className="zd">来源：{infoSource}</div>
     </div>
   )
 }
@@ -57,7 +58,7 @@ function News ({ province }) {
           .slice(0, len)
           .map(n => <New {...n} key={n.id} />)
       }
-      <div className="more" onClick={() => { setLen() }}>点击查看全部动态</div>
+      <div className="more zs" onClick={() => { setLen() }}>点击查看全部动态</div>
     </div>
   )
 }
@@ -70,8 +71,8 @@ function Summary () {
         <a href="https://m.yangshipin.cn/static/2020/c0126.html">疫情24小时 | 与疫情赛跑</a>
       </li>
       <li><a href="http://2019ncov.nosugartech.com/">确诊患者同行查询工具</a></li>
-      <li><a href="https://news.qq.com/zt2020/page/feiyan.htm">腾讯新闻新冠疫情实时动态</a></li>
-      <li><a href="https://3g.dxy.cn/newh5/view/pneumonia">丁香园新冠疫情实时动态</a></li>
+      {/*<li><a href="https://news.qq.com/zt2020/page/feiyan.htm">腾讯新闻新冠疫情实时动态</a></li>*/}
+      {/*<li><a href="https://3g.dxy.cn/newh5/view/pneumonia">丁香园新冠疫情实时动态</a></li>*/}
       <li><a href="https://vp.fact.qq.com/home">新型冠状病毒实时辟谣</a></li>
       <li><a href="https://promo.guahao.com/topic/pneumonia">微医抗击疫情实时救助</a></li>
     </div>
@@ -148,7 +149,7 @@ function Area ({ area, onChange }) {
 
 function Header ({ province }) {
   return (
-    <div style="height:132px;">
+    <div className='headers'>
       <div className="bg"></div>
 
     </div>

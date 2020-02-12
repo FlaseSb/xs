@@ -17,7 +17,7 @@ header i {
 .title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #f60;
+  color: #10a1da;
   margin: .5rem 0;
   display: block;
 }
@@ -44,7 +44,7 @@ header i {
 }
 
 .province.header > div {
-  background-color: #f60;
+  background-color: #10a1da;
   color: #fcfcfc;
 }
 
@@ -75,7 +75,7 @@ header i {
   height: 0;
   border-width: 6px 0 6px 6px;
   border-style: solid;
-  border-color: transparent transparent transparent #f60;
+  border-color: transparent transparent transparent #10a1da;
   left: 10px;
   top: 50%;
   transform: translate(0, -50%);
@@ -116,7 +116,7 @@ a {
 
 .info > li {
   list-style: none;
-  background-color: #2834b9;
+  background-color: #5a65dc;
   padding: .8rem 1.8rem;
   border-radius: 8px;
   text-decoration: none;
@@ -130,11 +130,11 @@ a {
 .tip {
   color: #888;
   padding: .5rem 0;
-  /* border-left: 1px solid #f60; */
+  /* border-left: 1px solid #10a1da; */
 }
 
 h2 small {
-  color: #f60;
+  color: #10a1da;
   position: absolute;
   right: 0;
   top: 50%;

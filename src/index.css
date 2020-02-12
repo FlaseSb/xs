@@ -13,13 +13,12 @@ code {
     monospace;
 }
 
-header {
-  padding: 1rem;
-  position: relative;
+.headers {
   color: #fff;
+  height: 170px;
 }
 
-header .bg {
+.headers .bg{
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +28,7 @@ header .bg {
   background-position: center;
   background-size: 100%;
   z-index: -1;
-  height: 132px;
+  height: 172px;
 }
 
 h1 {
@@ -40,7 +39,7 @@ h1 {
 h2 {
   margin: .5rem 0;
   padding: 3px 10px;
-  border-left: .2rem solid #f60;
+  border-left: .2rem solid #2ab8c3;
   border-bottom: 1px solid #efefef;
   position: relative;
 }
@@ -55,4 +54,14 @@ h2 {
   background-color: #fff;
   padding: 1rem;
   margin: 10px 0;
+}
+
+.zd{
+  text-align: right;
+  color: #888;
+}
+
+.zs{
+   text-align: center;
+  margin-top: 20px;
 }
