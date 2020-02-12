@@ -40,7 +40,5 @@ jobs:
     - name: 删除冗余文件
       run: ossutil rm oss://xstvlive/static -rf
       if: github.event_name == 'schedule'
-    - name: update ossutil
-      run: ossutil update -f
     - name: cp files to aliyun
       run: ossutil cp -r build/ oss://xstvlive/ --update
