@@ -148,15 +148,10 @@ function Area ({ area, onChange }) {
 
 function Header ({ province }) {
   return (
-    <header>
+    <div style="height:132px;">
       <div className="bg"></div>
-      <h1>
-        <small>新型冠状病毒</small>
-        <br />
-        疫情实时动态 · { province ? province.name : '省市地图' }
-      </h1>
-      <i>智慧萧山</i>
-    </header>
+
+    </div>
   )
 }
 
