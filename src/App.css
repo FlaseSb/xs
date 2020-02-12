@@ -17,7 +17,7 @@ header i {
 .title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #10a1da;
+  color: #120ee0;
   margin: .5rem 0;
   display: block;
 }
@@ -140,3 +140,4 @@ h2 small {
   top: 50%;
   transform: translateY(-50%);
 }
+
